@@ -6,6 +6,8 @@ import { HabitsListPage } from './exercises/components/habits-list/page/habits-l
 import { IfExercisePage } from './exercises/components/if/page/if-exercise.page'
 import { FormsPage } from './exercises/components/forms/page/forms.page'
 import { CustomPropertiesPage } from './exercises/css/custom-properties/page/custom-properties.page'
+import { ContentProjectionPage } from './exercises/components/content-projection/page/content-projection.page'
+import { ContentProjectionMultiPage } from './exercises/components/content-projection-multi/page/content-projection-multi.page'
 
 export const routes: Routes = [
   {
@@ -37,6 +39,16 @@ export const routes: Routes = [
     title: 'Reactive Forms',
     path: 'reactive-forms',
     component: FormsPage,
+  },
+  {
+    title: 'Content Projection',
+    path: 'content-projection',
+    component: ContentProjectionPage,
+  },
+  {
+    title: 'Content Projection',
+    path: 'content-projection-multi',
+    component: ContentProjectionMultiPage,
   },
   {
     title: 'Custom Properties',

@@ -39,14 +39,26 @@ export const pagesMap: { [key: string]: PageNode } = {
   },
   'reactive-forms': {
     prev: 'conditional-rendering',
-    next: 'custom-properties',
+    next: 'content-projection',
     link: 'reactive-forms',
     title: 'Ejercicio 6. Formularios Reactivos.',
   },
+  'content-projection': {
+    prev: 'reactive-forms',
+    next: 'content-projection-multi',
+    link: 'content-projection',
+    title: 'Ejercicio 7. Content Projection (ng-content)',
+  },
+  'content-projection-multi': {
+    prev: 'content-projection',
+    next: 'custom-properties',
+    link: 'content-projection-multi',
+    title: 'Ejercicio 8. Multi-Slot Content Projection',
+  },
   'custom-properties': {
-    prev: 'conditional-rendering',
+    prev: 'content-projection-multi',
     next: null,
     link: 'custom-properties',
-    title: 'Ejercicio 7. Custom Properties.',
+    title: 'Ejercicio 9. Custom Properties.',
   },
 }
