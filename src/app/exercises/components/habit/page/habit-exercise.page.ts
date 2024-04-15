@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, Input, input } from '@angular/core'
 import { SolutionComponent } from '../../../../dashboard/delivery/components/solution/solution.component'
 import { HabitSolutionComponent } from '../_solution/habit.component'
 import { HabitComponent } from '../habit.component'
@@ -12,8 +12,14 @@ import { MdComponent } from '../../../../dashboard/delivery/components/markdown/
       <app-markdown statement src="assets/app/exercises/components/habit/README.md" />
       <app-habit-solution solution habit="Meditar" />
       <app-habit user-solution name="Meditar" />
+      <app-habit user-solution [text]="textVar" />
     </app-solution-component>
   `,
   imports: [SolutionComponent, HabitSolutionComponent, HabitComponent, MdComponent],
 })
-export class EventExercisePage {}
+export class EventExercisePage {
+  textVar = 'Esto es un valor de prueba'
+  getMessage() {
+    return 'Hola mundo'
+  }
+}
