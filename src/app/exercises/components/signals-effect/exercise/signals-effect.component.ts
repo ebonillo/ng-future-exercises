@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, computed, effect, signal } from '@angular/core'
 
 @Component({
   selector: 'app-signals-effect',
@@ -7,4 +7,23 @@ import { Component } from '@angular/core'
   standalone: true,
   imports: [],
 })
-export class SignalsEffectComponent {}
+export class SignalsEffectComponent {
+  value = signal(0)
+  showAlert = computed(() => this.value() > 5)
+
+  constructor() {
+    effect(() => {
+      if (this.showAlert()) {
+        alert('Valor mayor a 5')
+      }
+    })
+  }
+
+  increase() {
+    this.value.update(value => value + 1)
+  }
+
+  decrease() {
+    this.value.update(value => value - 1)
+  }
+}
