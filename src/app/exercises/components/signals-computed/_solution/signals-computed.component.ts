@@ -15,7 +15,7 @@ export class SignalsComputedSolutionComponent {
     this.value.set(0)
   }
 
-  increment() {
+  increase() {
     this.value.update(value => value + 1)
   }
 
